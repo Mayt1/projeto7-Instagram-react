@@ -1,45 +1,66 @@
 export default function SideBar() {
+    const user = [
+        {
+            urlUserImg:'assets/imagens/catanacomics 1.png',
+            urlUserImgAlt:"catanacomics1Imagen",
+            userAccount:"yctor.ulian",
+            userName:"Victor Ulian"
+        }
+    ]
+    
+    const sugestion = [
+        {
+            urlUserImg:'assets/imagens/luffy.jpg',
+            userAccount:"luffy.oficial",
+            situation:"Segue você"
+        },
+        {
+            urlUserImg:'assets/imagens/frutaluffy.jpg',
+            userAccount:"fruta.luffy",
+            situation:"Seguido(a) por jushijushinomi"
+        },
+        {
+            urlUserImg:'assets/imagens/nika.jpg',
+            userAccount:"nika.deus.do.sol",
+            situation:"Segue você"
+
+        },
+        {
+            urlUserImg:'assets/imagens/joyboy.jpg',
+            userAccount:"joyboy",
+            situation:"Novo no Instagram"
+        },
+        {
+            urlUserImg:'assets/imagens/goldroger.jpg',
+            userAccount:"gol.d.roger",
+            situation:"Sugestões para você"
+        }
+    ]
+
     return (
         <div class="sidebar">
-            <SideBarUser
-                urlUserImg='assets/imagens/catanacomics 1.png'
-                urlUserImgAlt="catanacomics1Imagen"
-                userAccount="yctor.ulian"
-                userName="Victor Ulian"
-            />
+
+            {user.map(user => <SideBarUser
+                urlUserImg={user.urlUserImg}
+                urlUserImgAlt={user.urlUserImgAlt}
+                userAccount={user.userAccount}
+                userName={user.userName}
+            />)}
+
             <div class="sugestoes">
                 <div class="titulo">
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
 
-                <SideBarSugestion
-                    urlUserImg='assets/imagens/dragonball_1.jpg'
-                    userAccount="DragonBall"
-                    situation="Segue você"
-                />
-                <SideBarSugestion
-                    urlUserImg='assets/imagens/onepiece_1.png'
-                    userAccount="frutadoluffy"
-                    situation="Seguido(a) por jushijushinomi"
-                />
-                <SideBarSugestion
-                    urlUserImg='assets/imagens/dragonball_1.jpg'
-                    userAccount="DragonBall"
-                    situation="Segue você"
-                />
-                <SideBarSugestion
-                    urlUserImg='assets/imagens/dragonball_1.jpg'
-                    userAccount="DragonBall"
-                    situation="Segue você"
-                />
-                <SideBarSugestion
-                    urlUserImg='assets/imagens/dragonball_1.jpg'
-                    userAccount="DragonBall"
-                    situation="Segue você"
-                />
+                {sugestion.map(sugestion => <SideBarSugestion
+                    urlUserImg={sugestion.urlUserImg}
+                    userAccount={sugestion.userAccount}
+                    situation={sugestion.situation}
+                />)} 
+                
             </div>
-            
+
             <div class="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
             </div>
@@ -74,7 +95,6 @@ function SideBarSugestion(props) {
                     <div class="razao">{props.situation}</div>
                 </div>
             </div>
-
             <div class="seguir">Seguir</div>
         </div>
 

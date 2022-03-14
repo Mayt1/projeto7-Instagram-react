@@ -13,8 +13,7 @@ export default function App() {
             <div class="corpo">
                 <div class="esquerda">
                     <Stories />
-                    <Posts />
-                    
+                    <Posts />  
                 </div>
                 <SideBar />
             </div>

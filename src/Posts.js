@@ -1,27 +1,36 @@
 export default function Posts() {
+    const post = [
+        {
+            urlUser:'assets/imagens/meowed 1.png',
+            user:"Gatito",
+            alt:"Gatitoimage",
+            urlContent:'assets/imagens/gato-telefone 1.png',
+            urlUltimoLike:'assets/imagens/respondeai 2.png',
+            userUltimoLike:"respondeai",
+            nroLikes:"101.523"
+        },
+        {
+            urlUser:'assets/imagens/meowed 1.png',
+            user:"Gatito",
+            alt:"Gatitoimage",
+            urlContent:'assets/imagens/gato-telefone 1.png',
+            urlUltimoLike:'assets/imagens/respondeai 2.png',
+            userUltimoLike:"respondeai",
+            nroLikes:"101.523"
+        },
+    ]
+
     return (
         <div class="posts">
-
-            <Post
-                urlUser='assets/imagens/meowed 1.png'
-                user="Gatito"
-                alt="Gatitoimage"
-                urlContent='assets/imagens/gato-telefone 1.png'
-                urlUltimoLike='assets/imagens/respondeai 2.png'
-                userUltimoLike="respondeai"
-                nroLikes="101.523"
-            />
-
-            <Post
-                urlUser='assets/imagens/meowed 1.png'
-                user="Gatito"
-                alt="Gatitoimage"
-                urlContent='assets/imagens/gato-telefone 1.png'
-                urlUltimoLike='assets/imagens/respondeai 2.png'
-                userUltimoLike="respondeai"
-                nroLikes="101.523"
-            />
-
+            {post.map(post => <Post
+                urlUser={post.urlUser}
+                user={post.user}
+                alt={post.alt}
+                urlContent={post.urlContent}
+                urlUltimoLike={post.urlUltimoLike}
+                userUltimoLike={post.userUltimoLike}
+                nroLikes={post.nroLikes}
+            />)}    
         </div>
     );
 }
