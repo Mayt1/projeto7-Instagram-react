@@ -1,77 +1,69 @@
 export default function Posts() {
     return (
         <div class="posts">
-          <div class="post">
-            <div class="topo">
-              <div class="usuario">
-                <img src="assets/img/meowed.svg" />
-                meowed
-              </div>
-              <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
-            </div>
 
-            <div class="conteudo">
-              <img src="assets/img/gato-telefone.svg" />
-            </div>
+            <Post
+                urlUser='assets/imagens/meowed 1.png'
+                user="Gatito"
+                alt="Gatitoimage"
+                urlContent='assets/imagens/gato-telefone 1.png'
+                urlUltimoLike='assets/imagens/respondeai 2.png'
+                userUltimoLike="respondeai"
+                nroLikes="101.523"
+            />
 
-            <div class="fundo">
-              <div class="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
+            <Post
+                urlUser='assets/imagens/meowed 1.png'
+                user="Gatito"
+                alt="Gatitoimage"
+                urlContent='assets/imagens/gato-telefone 1.png'
+                urlUltimoLike='assets/imagens/respondeai 2.png'
+                userUltimoLike="respondeai"
+                nroLikes="101.523"
+            />
 
-              <div class="curtidas">
-                <img src="assets/img/respondeai.svg" />
-                <div class="texto">
-                  Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="post">
-            <div class="topo">
-              <div class="usuario">
-                <img src="assets/img/barked.svg" />
-                barked
-              </div>
-              <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
-            </div>
-
-            <div class="conteudo">
-              <img src="assets/img/dog.svg" />
-            </div>
-
-            <div class="fundo">
-              <div class="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
-
-              <div class="curtidas">
-                <img src="assets/img/adorable_animals.svg" />
-                <div class="texto">
-                  Curtido por <strong>adorable</strong> e <strong>outras 99.159 pessoas</strong>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+    );
+}
+
+function Post(props) {
+    return (
+
+        <div class="post">
+            <div class="topo">
+              <div class="usuario">
+                <img src={props.urlUser} alt-text={props.alt} />
+                <p>{props.user}</p>
+              </div>
+              <div class="acoes">
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
+              </div>
+            </div>
+
+            <div class="conteudo">
+              <img src={props.urlContent} />
+            </div>
+
+            <div class="fundo">
+              <div class="acoes">
+                <div>
+                  <ion-icon name="heart-outline"></ion-icon>
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <div>
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+              </div>
+
+              <div class="curtidas">
+                <img src={props.urlUltimoLike} />
+                <div class="texto">
+                  Curtido por <strong>{props.userUltimoLike}</strong> e <strong>outras {props.nroLikes} pessoas</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
     );
 }

@@ -18,6 +18,7 @@ export default function App() {
                 </div>
                 <SideBar />
             </div>
+            
 		</div>
     );
 }

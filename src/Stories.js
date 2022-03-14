@@ -1,82 +1,41 @@
 export default function Stories() {
+    const stories = [""]
+
     return (
         <div class="stories">
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/9gag.svg" />
-            </div>
-            <div class="usuario">
-              9gag
-            </div>
-          </div>
+          <Story url='assets/imagens/dragonball_1.jpg' user="DragonBall" alt="Dragonballimage"/>
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/meowed.svg" />
-            </div>
-            <div class="usuario">
-              meowed
-            </div>
-          </div>
+          <Story url='assets/imagens/bleach_1.jpg' user="Bleach" alt="bleachimage"/>
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/barked.svg" />
-            </div>
-            <div class="usuario">
-              barked
-            </div>
-          </div>
+          <Story url='assets/imagens/bokunohero_1.png' user="BokuNoHero" alt="bokunoheroimage"/>
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/nathanwpylestrangeplanet.svg" />
-            </div>
-            <div class="usuario">
-              nathanwpylestrangeplanet
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/wawawicomics.svg" />
-            </div>
-            <div class="usuario">
-              wawawicomics
-            </div>
-          </div>
+          <Story url='assets/imagens/shingeky_1.png' user="ShingekyNoKyojin" alt="erenimage"/>
           
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/respondeai.svg" />
-            </div>
-            <div class="usuario">
-              respondeai
-            </div>
-          </div>
+          <Story url='assets/imagens/onepiece_1.jpg' user="Joyboy" alt="mugiwarasimage"/>
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/filomoderna.svg" />
-            </div>
-            <div class="usuario">
-              filomoderna
-            </div>
-          </div>
+          <Story url='assets/imagens/naruto_1.jpg' user="Naruto" alt="narutoimage"/>
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/memeriagourmet.svg" />
-            </div>
-            <div class="usuario">
-              memeriagourmet
-            </div>
-          </div>
+          <Story url='assets/imagens/oyasumipunpun_1.png' user="OyasumiPunpun" alt="punpunimage"/>
+
+          <Story url='assets/imagens/gato-telefone 1.png' user="Gatito" alt="gatitoimage"/>
 
           <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
           </div>
         </div>
 
+    );
+}
+
+function Story(props) {
+    return (
+            <div class="story">
+                <div class="imagem">
+                    <img src={props.url} alt-text={props.alt}/>
+                </div>
+                <div class="usuario">
+                    {props.user}
+                </div>
+            </div>
     );
 }
